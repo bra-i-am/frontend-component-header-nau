@@ -8,10 +8,6 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    environment: release
-    permissions:
-      contents: read
-      id-token: write
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -44,6 +40,6 @@ jobs:
     - name: Build
       run: npm run build
     - name: Release to npmjs
-      run: npm publish --access public --provenance
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      uses: JS-DevTools/npm-publish@v4
+      with:
+        token: ${{ secrets.NPM_AUTH_TOKEN }}
