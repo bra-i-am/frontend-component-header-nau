@@ -1,6 +1,6 @@
 {
   "name": "@brayan-edunext/frontend-component-header",
-  "version": "20.1.4",
+  "version": "20.1.5",
   "description": "NAU header component for Open edX",
   "main": "dist/index.js",
   "publishConfig": {
